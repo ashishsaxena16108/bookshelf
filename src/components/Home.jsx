@@ -18,10 +18,10 @@ const Home = () => {
   return (
     <div className='w-full flex flex-col justify-center items-center'>
       <Navbar />
-      <div className="search w-1/2 m-5 h-12 ">
+      <div className="search w-1/2 m-5 h-12 md:w-2/3">
         <input type="text" placeholder='Search books ...' className='w-full h-full font-bold text-2xl p-3 bg-amber-100 rounded-2xl' onKeyDown={(e) => searchBooks(e)} />
       </div>
-      <div className="cards flex flex-row m-6 gap-3 flex-wrap">
+      <div className="cards flex flex-row m-6 gap-3 flex-wrap md:flex-col">
         {books.map((b, index) => {
           let clicked=false
           if(myBooks!==null)
