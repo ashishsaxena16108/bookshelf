@@ -7,7 +7,7 @@ const fillerSlice = createSlice({
   initialState,
   reducers:{
      addBook(state,book){
-         state.value.push(book)
+         state.value?.push(book)
          localStorage.setItem("books",JSON.stringify(state.value))
      },
      getBooks(state){
