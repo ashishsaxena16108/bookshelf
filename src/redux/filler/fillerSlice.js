@@ -15,8 +15,8 @@ const fillerSlice = createSlice({
         state.value=books
      },
      deleteBook(state,title){
-       state.value=state.value.filter((book)=>{
-         return book.payload.title!==title.payload
+       state.value=state.value?.filter((book)=>{
+         return book?.payload.title!==title?.payload
        })
        localStorage.setItem("books",JSON.stringify(state.value))
      }

@@ -15,7 +15,7 @@ const User = () => {
       <Navbar/>
       <h3 className=' text-4xl font-bold'>My BookShelf</h3>
       <div className="cards flex flex-row m-6 gap-3 flex-wrap">
-        {myBooks.map((b, index) => {
+        {myBooks?.map((b, index) => {
           return <div className="card relative w-96 h-48 rounded-xl bg-pink-200 p-3" key={index}>
             <h2 className='font-bold text-2xl m-2'>{b.payload.title}</h2>
             <p className='text-xl font-medium m-2'>Edition Count:{b.payload.edition_count}</p>
