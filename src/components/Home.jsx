@@ -23,7 +23,10 @@ const Home = () => {
       </div>
       <div className="cards flex flex-row m-6 gap-3 flex-wrap">
         {books.map((b, index) => {
-          return <Card isClick={myBooks.find((book)=>{return book.payload.title===b.title})!==undefined} book={b} key={index}/>
+          const clicked=false
+          if(myBooks.length!==0)
+             clicked = myBooks.find((book)=>{return book.payload.title===b.title})!==undefined
+          return <Card isClick={clicked} book={b} key={index}/>
         })}
       </div>
     </div>
