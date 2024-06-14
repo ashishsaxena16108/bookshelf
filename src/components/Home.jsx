@@ -24,7 +24,7 @@ const Home = () => {
       <div className="cards flex flex-row m-6 gap-3 flex-wrap">
         {books.map((b, index) => {
           let clicked=false
-          if(myBooks.length!==0)
+          if(myBooks!==null)
              clicked = myBooks.find((book)=>{return book.payload.title===b.title})!==undefined
           return <Card isClick={clicked} book={b} key={index}/>
         })}
