@@ -14,7 +14,7 @@ const User = () => {
     <div className='w-full flex flex-col justify-center items-center'>
       <Navbar/>
       <h3 className=' text-4xl font-bold'>My BookShelf</h3>
-      <div className="cards flex flex-row m-6 gap-3 flex-wrap md:flex-col">
+      <div className="cards flex flex-col m-6 gap-3 flex-wrap md:flex-row">
         {myBooks?.map((b, index) => {
           return <div className="card relative w-96 h-48 rounded-xl bg-pink-200 p-3" key={index}>
             <h2 className='font-bold text-2xl m-2'>{b.payload.title}</h2>
