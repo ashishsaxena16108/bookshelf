@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({user}) => {
   return (
     <div className='flex flex-row justify-between w-full'>
       <Link to='/'>
@@ -14,7 +14,7 @@ const Navbar = () => {
       </span>f
       </h2>
       </Link>
-      {window.location.href!=='localhost:5173/user' && 
+      {!user && 
       <Link to='/user'>
       <button className=' w-32 h-24 font-bold text-xl text-white p-0 m-5 border-4 flex flex-col items-center justify-center bg-fuchsia-600 rounded-lg hover:opacity-50 cursor-pointer'>
        <span>My</span> BookShelf
